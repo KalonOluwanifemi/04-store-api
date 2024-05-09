@@ -11,6 +11,9 @@ const getAllProducts = async (req, res) => {
   if (featured) {
     queryObject.featured = featured === "true" ? true : false;
   }
+  if (featured) {
+    queryObject.company = company;
+  }
   const products = await Product.find(req.query);
   res.status(200).json({
     products,

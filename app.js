@@ -20,7 +20,7 @@ app.use("/api/v1/products", productsRouter);
 app.use(notFoundMiddleware);
 app.use(errorMiddleWare);
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 2000;
 
 const start = async () => {
   try {
